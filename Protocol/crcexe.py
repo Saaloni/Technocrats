@@ -8,7 +8,7 @@ def crcfunc(payload):
     crc32 = crcmod.Crc(0x104c11db7, initCrc=0, xorOut=0xFFFFFFFF)
     crc32.update(payload)
     msgcrc=crc32.crcValue
-    crc=bytes(str(hex(msgcrc)),'ascii')
+    crc=bytes((hex(msgcrc),'ascii')
     print('crc')    #for
     print(crc)      #verification
     return crc
